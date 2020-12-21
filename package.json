@@ -1,0 +1,44 @@
+{
+  "name": "octopus-cra-plugins",
+  "version": "1.0.0",
+  "description": "Customize create-react-app as plugins by KrakenTeam!!!",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "format": "prettier --config .prettierrc --write src/**/*",
+    "build": "npm run clean && tsc && gulp bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krakenui/octopus-cra-plugins.git"
+  },
+  "keywords": [
+    "@kraken",
+    "@cra",
+    "create-react-app",
+    "plugins",
+    "kraken",
+    "octopus",
+    "env",
+    "nightly"
+  ],
+  "author": "Luong Phung <luonguit@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^13.9.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "mongoose": "^5.9.3",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3"
+  }
+}
