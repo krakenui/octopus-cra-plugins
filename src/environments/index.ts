@@ -27,11 +27,9 @@ const appendProcessEnv = (config: any, filePath: string, replace: boolean) => {
       const definitionsObj = replace ? {} : config.plugins[definitionsIndex].definitions["process.env"];
       config.plugins[definitionsIndex].definitions["process.env"] = Object.assign(definitionsObj, envDefinitions);
     }
-
-    return 0;
+  } else {
+    console.warn(`Environment setting file at ${filePath} not exist`);
   }
-
-  console.warn(`Environment setting file at ${filePath} not exist`);
 };
 
 const getScriptEnv = (script: string) => {
@@ -67,6 +65,8 @@ const overrideProcessEnv = (workDir: string = null, replace: boolean = false) =>
       appendProcessEnv(config, envFile, replace);
     }
   }
+
+  return config;
 };
 
 export default overrideProcessEnv;

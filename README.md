@@ -33,14 +33,22 @@ npm install octopus-cra-plugins
 
 ## How it work
 
-#### MongoDB context
+#### Override process env
 
-- using:
+- Declare override:
 
 ```
 import { overrideProcessEnv } from "octopus-cra-plugins";
 
 overrideProcessEnv(workDir, true);
+```
+
+- Env file `.env.nightly`
+
+- Script:
+
+```
+    npm run react-scripts build --cra-env nightly
 ```
 
 #### Options
